@@ -13,20 +13,51 @@ const Home = () => {
         />
         <div className={`${classes["home__row"]}`}>
           <Product
-            title="The lean start"
+            id={Math.random().toString()}
+            title="Samsung galaxy: The best south korean GSMs you can ever get"
             image="https://m.media-amazon.com/images/I/410b3ttpfAL.__AC_SY200_.jpg"
             price={29.99}
             rating={3}
           />
-          <Product />
+          <Product
+            id={Math.random().toString()}
+            title="Samsung galaxy: The best south korean GSMs you can ever get"
+            image="https://m.media-amazon.com/images/I/410b3ttpfAL.__AC_SY200_.jpg"
+            price={29.99}
+            rating={3}
+          />
         </div>
         <div className={`${classes["home__row"]}`}>
-          <Product />
-          <Product />
-          <Product />
+          <Product
+            id={Math.random().toString()}
+            title="Samsung galaxy: The best south korean GSMs you can ever get"
+            image="https://m.media-amazon.com/images/I/410b3ttpfAL.__AC_SY200_.jpg"
+            price={29.99}
+            rating={3}
+          />
+          <Product
+            id={Math.random().toString()}
+            title="Samsung galaxy: The best south korean GSMs you can ever get"
+            image="https://m.media-amazon.com/images/I/410b3ttpfAL.__AC_SY200_.jpg"
+            price={29.99}
+            rating={3}
+          />
+          <Product
+            id={Math.random().toString()}
+            title="Samsung galaxy: The best south korean GSMs you can ever get"
+            image="https://m.media-amazon.com/images/I/410b3ttpfAL.__AC_SY200_.jpg"
+            price={29.99}
+            rating={3}
+          />
         </div>
         <div className={`${classes["home__row"]}`}>
-          <Product />
+          <Product
+            id={Math.random().toString()}
+            title="Samsung galaxy: The best south korean GSMs you can ever get"
+            image="https://m.media-amazon.com/images/I/410b3ttpfAL.__AC_SY200_.jpg"
+            price={29.99}
+            rating={3}
+          />
         </div>
       </div>
     </div>
