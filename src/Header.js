@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 
 const Header = () => {
-  useStateValue();
+  const { basket } = useStateValue()[0];
   return (
     <div className={`${classes["header"]}`}>
       <Link to="/">
@@ -41,7 +41,7 @@ const Header = () => {
             <span
               className={`${classes["header__optionLineTwo"]} ${classes["header__basketCount"]}`}
             >
-              0
+              {basket?.length}
             </span>
           </div>
         </Link>
