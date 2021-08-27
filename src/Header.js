@@ -3,8 +3,10 @@ import classes from "./Header.module.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 const Header = () => {
+  useStateValue();
   return (
     <div className={`${classes["header"]}`}>
       <Link to="/">
