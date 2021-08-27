@@ -18,13 +18,13 @@ const Checkout = () => {
           <h2 className={`${classes["checkout__title"]}`}>
             Your shopping basket
           </h2>
-          {/* <CheckoutProduct
+          <CheckoutProduct
             id="12321341"
             title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
             price={11.96}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
-          /> */}
+          />
           {basket?.map((item) => (
             <CheckoutProduct
               id={item.id}
