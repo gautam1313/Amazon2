@@ -17,7 +17,7 @@ const Product = ({ id, title, price, image, rating }) => {
     });
   };
   return (
-    <div className={`${classes["product"]}`}>
+    <div className={`${classes["product"]}`} key={id}>
       <div className={`${classes["product__info"]}`}>
         <p>{title}</p>
         <p className={`${classes["product__price"]}`}>
