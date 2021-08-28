@@ -21,12 +21,16 @@ const Header = () => {
         <SearchIcon className={`${classes["header__searchIcon"]}`} />
       </div>
       <div className={`${classes["header__nav"]}`}>
-        <div className={`${classes["header__option"]}`}>
-          <span className={`${classes["header__optionLineOne"]}`}>
-            Hello User
-          </span>
-          <span className={`${classes["header__optionLineTwo"]}`}>Sign In</span>
-        </div>
+        <Link to="/login">
+          <div className={`${classes["header__option"]}`}>
+            <span className={`${classes["header__optionLineOne"]}`}>
+              Hello User
+            </span>
+            <span className={`${classes["header__optionLineTwo"]}`}>
+              Sign In
+            </span>
+          </div>
+        </Link>
         <div className={`${classes["header__option"]}`}>
           <span className={`${classes["header__optionLineOne"]}`}>Returns</span>
           <span className={`${classes["header__optionLineTwo"]}`}>& Order</span>

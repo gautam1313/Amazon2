@@ -3,17 +3,22 @@ import Header from "./Header";
 import Home from "./Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Checkout from "./Checkout";
+import Login from "./Login";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
         <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/checkout">
+            <Header />
             <Checkout />
           </Route>
           <Route path="/">
+            <Header />
             <Home />
           </Route>
         </Switch>
