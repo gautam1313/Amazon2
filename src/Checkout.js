@@ -5,7 +5,7 @@ import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 
 const Checkout = () => {
-  const { basket } = useStateValue()[0];
+  const { basket, user } = useStateValue()[0];
   return (
     <div className={`${classes["checkout"]}`}>
       <div className={`${classes["checkout__left"]}`}>
@@ -15,6 +15,7 @@ const Checkout = () => {
           alt=""
         />
         <div>
+          {user && <p>Hello {user?.email},</p>}
           <h2 className={`${classes["checkout__title"]}`}>
             Your shopping basket
           </h2>
