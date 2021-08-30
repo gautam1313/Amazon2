@@ -11,10 +11,10 @@ const Home = () => {
           src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
           alt=""
         />
-        <img
+        {/* <img
           className={`${classes["home__image"]}`}
           src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2020/X-site/Multititle/Aug/1500x600_Hero-Tall_np._CB404803728_.jpg"
-        />
+        /> */}
         <div className={`${classes["home__row"]}`}>
           <Product
             id={Math.random().toString()}
