@@ -10,6 +10,8 @@ import { basketTotalPrice } from "./reducer";
 const Payment = () => {
   const { user, basket } = useStateValue()[0];
 
+  const [processing, setProcessing] = useState(false);
+  const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [disable, setDisable] = useState(true);
 
@@ -79,7 +81,11 @@ const Payment = () => {
                   thousandSeparator={true}
                   displayType={"text"}
                 />
+                <button disabled={disable || processing || succeeded}>
+                  {processing ? <p>Processing..</p> : "Buy Now"}
+                </button>
               </div>
+              {error && <div>{error}</div>}
             </form>
           </div>
         </div>
