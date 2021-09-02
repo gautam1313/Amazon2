@@ -7,9 +7,10 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { basketTotalPrice } from "./reducer";
 import axios from "./axios";
+import { db } from "./firebase";
 
 const Payment = () => {
-  const { user, basket } = useStateValue()[0];
+  const [{ user, basket }, dispatch] = useStateValue();
 
   const [processing, setProcessing] = useState(false);
   const [succeeded, setSucceeded] = useState(false);
@@ -33,7 +34,7 @@ const Payment = () => {
   }, [basket]);
 
   const handleSubmit = async (e) => {
-    e.preventdefault();
+    e.preventDefault();
     setProcessing(true);
 
     const payload = await stripe
@@ -42,16 +43,36 @@ const Payment = () => {
           card: elements.getElement(CardElement),
         },
       })
-      .then(({ paymentIntent }) => {
+      .then((response) => {
+        console.log("Payment intent>>>>", response);
+        const paymentIntent = response.error
+          ? response.error.payment_intent
+          : response.paymentIntent;
+
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setProcessing(false);
         setSucceeded(true);
         setError(null);
 
+        dispatch({
+          type: "CLEAR_BASKET",
+        });
+
         history.replace("/orders");
-      });
+      })
+      .catch((error) => console.log("Error>>>>", error.message));
   };
   const handleChange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setDisable(e.empty);
     setError(e.error ? e.error.message : "");
   };
