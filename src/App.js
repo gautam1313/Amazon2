@@ -12,9 +12,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
 
-const promise = loadStripe(
-  "pk_test_51JU8nYSB5w0t6SXMbfKbmr8kiwEFrBHXFCjeAvPbfJavEOyQgz2HiLO5VBDcqT5jwGV3uuKaO51MtVYXGzadf24r00bj5EHmoG"
-);
+//Create a stripe account and use the primary key provided below
+const promise = loadStripe("");
 
 function App() {
   const dispatch = useStateValue()[1];

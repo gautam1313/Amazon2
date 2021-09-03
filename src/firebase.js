@@ -1,12 +1,12 @@
 import firebase from "firebase";
-
+//Create a firebase project add the config details below
 const firebaseConfig = {
-  apiKey: "AIzaSyAjzlZTQyms5vwIxyhzkbLiMfgvuCNtUfA",
-  authDomain: "fir-b8b03.firebaseapp.com",
-  projectId: "fir-b8b03",
-  storageBucket: "fir-b8b03.appspot.com",
-  messagingSenderId: "1086067087940",
-  appId: "1:1086067087940:web:dfaeda32504652b791fa11",
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
