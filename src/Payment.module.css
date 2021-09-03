@@ -30,3 +30,23 @@
 .payment__details {
   flex: 0.8;
 }
+
+.payment__details > form {
+  max-width: 400px;
+}
+
+.payment__priceContainer > h3 {
+  padding-bottom: 20px;
+}
+
+.payment__priceContainer > button {
+  color: #111;
+  background: #f0c14b;
+  height: 30px;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid;
+  font-weight: bolder;
+  border-color: #a88734 #9c7e31 #846a29;
+  margin-top: 10px;
+}

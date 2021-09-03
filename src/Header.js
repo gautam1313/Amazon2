@@ -37,10 +37,16 @@ const Header = () => {
             </span>
           </div>
         </Link>
-        <div className={`${classes["header__option"]}`}>
-          <span className={`${classes["header__optionLineOne"]}`}>Returns</span>
-          <span className={`${classes["header__optionLineTwo"]}`}>& Order</span>
-        </div>
+        <Link to="/orders">
+          <div className={`${classes["header__option"]}`}>
+            <span className={`${classes["header__optionLineOne"]}`}>
+              Returns
+            </span>
+            <span className={`${classes["header__optionLineTwo"]}`}>
+              & Order
+            </span>
+          </div>
+        </Link>
         <div className={`${classes["header__option"]}`}>
           <span className={`${classes["header__optionLineOne"]}`}>Your</span>
           <span className={`${classes["header__optionLineTwo"]}`}>Prime</span>
